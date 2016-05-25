@@ -22,7 +22,7 @@ var styles = {
 var Loading = React.createClass({
     propTypes: {
         text: PropTypes.string,
-        speed: propTypes.number
+        speed: PropTypes.number
     },
     getDefaultProps(){
         return {

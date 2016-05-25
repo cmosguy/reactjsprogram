@@ -45,6 +45,10 @@ function calculateScores(players) {
     ]
 }
 var helpers = {
+    getGists(username) {
+        //fetch usernames repos
+        return axios.get('https://api.github.com/users/' + username + '/gists');
+    },
     getPlayersInfo(players){
         return axios.all(players.map(function (username) {
             return getUserInfo(username)
