@@ -17,7 +17,7 @@ var ConfirmBattleContainer = React.createClass({
         githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo])
             .then(function (players) {
                 this.setState({
-                    isLoading: false,
+                    isLoading: true,
                     playersInfo: [players[0], players[1]]
                 })
             }.bind(this))
@@ -28,7 +28,7 @@ var ConfirmBattleContainer = React.createClass({
             pathname: '/results',
             state: {
                 //this pushes the state into the new router path that we are going to
-                playerInfo: this.state.playerInfo
+                playersInfo: this.state.playersInfo
             }
         })
     },
