@@ -48,7 +48,7 @@ var Loading = React.createClass({
                     text: this.state.text + '.'
                 })
             }
-        }.bind(this), 300)
+        }.bind(this), this.props.speed)
     },
     componentWillUnmount(){
         //this stops the function in memory and clears it out
